@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Rhymes World 🌈</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Bunting flags across the top -->
+  <div class="bunting" aria-hidden="true">
+    <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+  </div>
+
+  <header class="hero">
+    <div class="hero-arc"></div>
+    <h1 class="logo">Rhymes World <span class="wave">🎶</span></h1>
+    <p class="tagline">A cosy little library of sing-song rhymes to read out loud.</p>
+
+    <div class="rhyme-of-day" id="rhyme-of-day">
+      <p class="rod-label">Rhyme of the day</p>
+      <h2 id="rod-title">Loading…</h2>
+      <p id="rod-snippet"></p>
+    </div>
+  </header>
+
+  <main>
+    <section class="shelf">
+      <div class="shelf-heading">
+        <h2>Pick a rhyme</h2>
+        <input id="search" type="text" placeholder="Search rhymes… 🔍" />
+      </div>
+
+      <div id="status" class="status"></div>
+      <div id="rhyme-grid" class="grid"></div>
+    </section>
+
+    <section class="addbox" id="add-section">
+      <h2>Add your own rhyme ✍️</h2>
+      <p class="hint">Know a fun rhyme? Add it here — it gets saved for everyone to see!</p>
+      <form id="rhyme-form">
+        <input id="title" type="text" placeholder="Rhyme title" required />
+        <textarea id="text" rows="4" placeholder="Type the rhyme here…" required></textarea>
+        <select id="emoji">
+          <option value="🐑">🐑 Sheep</option>
+          <option value="⭐">⭐ Star</option>
+          <option value="🥚">🥚 Egg</option>
+          <option value="🕷️">🕷️ Spider</option>
+          <option value="🐭">🐭 Mouse</option>
+          <option value="🚣">🚣 Boat</option>
+          <option value="🌙">🌙 Moon</option>
+        </select>
+        <button type="submit">Save rhyme</button>
+      </form>
+      <p id="form-msg"></p>
+    </section>
+  </main>
+
+  <!-- rhyme detail modal -->
+  <div id="modal" class="modal hidden">
+    <div class="modal-card">
+      <button id="modal-close" class="modal-close" aria-label="Close">✕</button>
+      <div id="modal-emoji" class="modal-emoji"></div>
+      <h2 id="modal-title"></h2>
+      <p id="modal-text"></p>
+    </div>
+  </div>
+
+  <footer>
+    <p>Made with 💛 by a young web builder — hosted free on GitHub Pages.</p>
+  </footer>
+
+  <!-- Firebase (this is our "backend + database" — no server code needed!) -->
+  <script type="module" src="firebase-config.js"></script>
+  <script type="module" src="script.js"></script>
+</body>
+</html>
