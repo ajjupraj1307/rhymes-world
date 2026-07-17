@@ -16,24 +16,12 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/fireba
 import { getFirestore } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 
 const firebaseConfig = {
-  apiKey: "https://ryms-b23c2-default-rtdb.firebaseio.com/
-:
-null",
-  authDomain: "https://ryms-b23c2-default-rtdb.firebaseio.com/
-:
-null",
-  projectId: "https://ryms-b23c2-default-rtdb.firebaseio.com/
-:
-null",
-  storageBucket: "https://ryms-b23c2-default-rtdb.firebaseio.com/
-:
-null",
-  messagingSenderId: "https://ryms-b23c2-default-rtdb.firebaseio.com/
-:
-null",
-  appId: "https://ryms-b23c2-default-rtdb.firebaseio.com/
-:
-null"
+  apiKey: "AIzaSyDmUFaKJjG81sd5vV2o27WIDLAZabKSjYQ",
+  authDomain: "ryms-b23c2.firebaseapp.com",
+  projectId: "ryms-b23c2",
+  storageBucket: "ryms-b23c2.firebasestorage.app",
+  messagingSenderId: "609914987761",
+  appId: "1:609914987761:web:741efd1a52dfe8cc887550"
 };
 
 // Make db available to script.js (window is the whole browser page)
